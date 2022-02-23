@@ -2,7 +2,6 @@ package deposit;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Date;
 import utils.DateManager;
 
 public class Gift extends Deposit {

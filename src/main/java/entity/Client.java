@@ -3,7 +3,6 @@ package entity;
 import deposit.Deposit;
 import exception.InvalidDepositException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +26,7 @@ public class Client extends Entity {
 
     /**
      * Add a deposit to his HashMap of deposits
-     * @param deposit
+     * @param deposit deposit to add
      */
     public void addDeposit(Deposit deposit){
         if(deposit == null){

@@ -23,11 +23,11 @@ public class Company extends Entity{
 
     /**
      * Check function variables, check if balance is valid and then add a deposit to a client
-     * @param depositType
-     * @param id
-     * @param startDate
-     * @param amount
-     * @param client
+     * @param depositType type of the deposit
+     * @param id id of the deposit
+     * @param startDate start date of the deposit
+     * @param amount amount of the deposit
+     * @param client client of the deposit
      */
     public void giveDeposit(String depositType, long id, LocalDate startDate, BigDecimal amount, Client client){
         if(client == null){
@@ -36,7 +36,7 @@ public class Company extends Entity{
         StringBuilder invalidElement = new StringBuilder();
         invalidElement.append(id == 0 ? "id " : "").append(startDate == null ? "startDate " : "").append(depositType == null ? "depositType ": "");
         if(invalidElement.length() > 0){
-            throw new InvalidDepositException("Invalid information for deposit: " + invalidElement.toString());
+            throw new InvalidDepositException("Invalid information for deposit: " + invalidElement);
         }
         DepositFactory depositFactory = new DepositFactory();
         if(this.balance.compareTo(amount) > -1) {
